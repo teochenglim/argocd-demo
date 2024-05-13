@@ -6,4 +6,10 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 kubectl create ns local-argo
 kubectl apply -f application.yaml
+
+$ kubectl get application -A
+NAMESPACE   NAME           SYNC STATUS   HEALTH STATUS
+argocd      nginx-argocd   Synced        Healthy
+
+
 ```

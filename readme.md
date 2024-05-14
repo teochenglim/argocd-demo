@@ -7,9 +7,9 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 kubectl apply -f namespace.yaml
 kubectl apply -f application.yaml
 
-$ kubectl get application -A
-NAMESPACE   NAME           SYNC STATUS   HEALTH STATUS
-argocd      nginx-argocd   Synced        Healthy
-
+$ kubectl get application -n argocd
+NAME               SYNC STATUS   HEALTH STATUS
+nginx-argocd       Synced        Healthy
+namespace-argocd   Synced        Healthy
 
 ```
